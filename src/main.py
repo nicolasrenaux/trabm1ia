@@ -6,51 +6,13 @@ from skfuzzy import control as ctrl
 # Carregar o dataset
 movie_data = pd.read_csv('../assets/movie_dataset.csv')
 
-# Perguntar quem está assistindo
-opcao = ""
-while opcao not in {"1", "2", "3", "4"}:
-    print("Quem está assistindo hoje?")
-    print("1 - Arthur Carminati")
-    print("2 - Nicolas Renaux")
-    print("3 - Pedro Ruthes")
-    print("4 - Henrique Schroeder")
-    opcao = input("Escolha uma opção (1-4): ").strip()
-    if opcao not in {"1", "2", "3", "4"}:
-        print("Opção inválida. Tente novamente.\n")
-
-# Preferências individuais
-preferencias = {
-    # Arthur Carminati
-    "1": {
-        "generos": {"sci-fi", "action", "comedy"},
-        "keywords": {"technology", "innovation", "future", "intense", "real-life"},
-        "peso_revenue": 0.6,
-        "peso_popularity": 0.8
-    },
-    # Nicolas Renaux
-    "2": {
-        "generos": {"thriller", "comedy", "adventure", "crime", "action"},
-        "keywords": {"thriller", "true story", "space", "sci-fi"},
-        "peso_revenue": 0.6,
-        "peso_popularity": 0.7,
-    },
-    # Pedro Ruthes
-    "3": {
-        "generos": {"comedy", "family", "romance"},
-        "keywords": {"love", "friendship", "school"},
-        "peso_revenue": 0.3,
-        "peso_popularity": 0.6,
-    },
-    # Henrique Schroeder
-    "4": {
-        "generos": {"action", "adventure", "sci-fi", "suspense", "comedy"},
-        "keywords": {"spy", "time travel", "tech", "dark", "history"},
-        "peso_revenue": 0.5,
-        "peso_popularity": 0.9,
-    },
+# Preferências do grupo
+prefs = {
+    "generos": {"fiction", "action", "comedy", "adventure", "crime"},
+    "keywords": {"technology", "future", "spy", "comedy", "real-life", "thriller"},
+    "peso_revenue": 0.55,
+    "peso_popularity": 0.8
 }
-
-prefs = preferencias.get(opcao, preferencias["1"])
 
 # Definição das variáveis de entrada
 vote_average = ctrl.Antecedent(np.arange(0, 10, 0.1), 'nota')
@@ -150,4 +112,6 @@ for _, row in movie_data.iterrows():
 rankings.sort(key=lambda x: x[1], reverse=True)
 print('\nTop 10 Filmes Rankeados:')
 for title, score in rankings[:10]:
+    score = score / 10
+
     print(f'{title}: {score:.2f}')
