@@ -1,3 +1,10 @@
+# Alunos
+
+- Arthur Carminati
+- Nicolas Renaux
+- Pedro Ruthes
+- Henrique Schroeder
+
 # Setup
 
 1. Clone o repositório

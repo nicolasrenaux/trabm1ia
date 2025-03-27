@@ -4,7 +4,7 @@ import pandas as pd
 from skfuzzy import control as ctrl
 
 # Carregar o dataset
-movie_data = pd.read_csv('../assets/movie_dataset.csv')
+movie_data = pd.read_csv('assets/movie_dataset.csv')
 
 # Preferências do grupo
 prefs = {
