@@ -4,7 +4,7 @@ import pandas as pd
 from skfuzzy import control as ctrl
 
 # Carregar o dataset
-movie_data = pd.read_csv('assets/movie_dataset.csv')
+movie_data = pd.read_csv('../assets/movie_dataset.csv')
 
 # Perguntar quem está assistindo
 opcao = ""
@@ -26,13 +26,13 @@ preferencias = {
         "keywords": {"technology", "innovation", "future", "intense", "real-life"},
         "peso_revenue": 0.6,
         "peso_popularity": 0.8
-    }
+    },
     # Nicolas Renaux
     "2": {
         "generos": {"thriller", "comedy", "adventure", "crime", "action"},
         "keywords": {"thriller", "true story", "space", "sci-fi"},
-        "peso_revenue": 0.8,
-        "peso_popularity": 0.9,
+        "peso_revenue": 0.6,
+        "peso_popularity": 0.7,
     },
     # Pedro Ruthes
     "3": {
