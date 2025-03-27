@@ -29,7 +29,7 @@ preferencias = {
     }
     # Nicolas Renaux
     "2": {
-        "generos": {"drama", "comedy", "adventure", "crime", "action"},
+        "generos": {"thriller", "comedy", "adventure", "crime", "action"},
         "keywords": {"thriller", "true story", "space", "sci-fi"},
         "peso_revenue": 0.8,
         "peso_popularity": 0.9,
