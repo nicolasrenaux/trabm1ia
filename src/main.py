@@ -22,14 +22,14 @@ while opcao not in {"1", "2", "3", "4"}:
 preferencias = {
     # Arthur Carminati
     "1": {
-        "generos": {"suspense", "crime", "drama"},
-        "keywords": {"real", "psychological", "dark"},
-        "peso_revenue": 0.5,
-        "peso_popularity": 0.7,
-    },
+        "generos": {"sci-fi", "action", "comedy"},
+        "keywords": {"technology", "innovation", "future", "intense", "real-life"},
+        "peso_revenue": 0.6,
+        "peso_popularity": 0.8
+    }
     # Nicolas Renaux
     "2": {
-        "generos": {"suspense", "comedy", "adventure", "crime", "action"},
+        "generos": {"drama", "comedy", "adventure", "crime", "action"},
         "keywords": {"thriller", "true story", "space", "sci-fi"},
         "peso_revenue": 0.8,
         "peso_popularity": 0.9,
